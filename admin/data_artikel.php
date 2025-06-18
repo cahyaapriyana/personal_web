@@ -7,7 +7,7 @@ exit;
 }
 
  
-$artikel_per_halaman = 3;
+$artikel_per_halaman = 5;
 $halaman = isset($_GET['halaman']) ? (int)$_GET['halaman'] : 1;
 $mulai = ($halaman - 1) * $artikel_per_halaman;
 
@@ -85,7 +85,7 @@ $query = mysqli_query($db, $sql);
                             echo "<tr class='hover:bg-[#E8F1F2] transition-colors'>";
                             echo "<td class='border-2 border-black p-2 md:p-3 text-center text-sm md:text-base'>" . $no++ . "</td>";
                             echo "<td class='border-2 border-black p-2 md:p-3 text-sm md:text-base'>" . htmlspecialchars($data['nama_artikel']) . "</td>";
-                            echo "<td class='border-2 border-black p-2 md:p-3 text-sm md:text-base'>" . htmlspecialchars($data['isi_artikel']) . "</td>";
+                            echo "<td class='border-2 border-black p-2 md:p-3 text-sm md:text-base'>" . htmlspecialchars(strlen($data['isi_artikel']) > 50 ? substr($data['isi_artikel'], 0, 50) . '...' : $data['isi_artikel']) . "</td>";
                             
                             if ($_SESSION['role'] === 'Admin' || $_SESSION['role'] === 'Editor') {
                                 echo "<td class='border-2 border-black p-2 md:p-3 text-center text-sm md:text-base'>\n";
