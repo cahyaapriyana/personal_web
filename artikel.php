@@ -1,6 +1,16 @@
 <?php 
 include "koneksi.php";
 session_start();
+ 
+$ip = $_SERVER['REMOTE_ADDR'];
+$user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+$tanggal = date('Y-m-d');
+
+ 
+$cek = mysqli_query($db, "SELECT id FROM tbl_pengunjung WHERE ip_address='$ip' AND tanggal='$tanggal'");
+if(mysqli_num_rows($cek) == 0) {
+    mysqli_query($db, "INSERT INTO tbl_pengunjung (tanggal, ip_address, user_agent) VALUES ('$tanggal', '$ip', '".mysqli_real_escape_string($db, $user_agent)."')");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

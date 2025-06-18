@@ -5,6 +5,15 @@ if (!isset($_SESSION['username'])) {
     header('location:login.php');
     exit;
 }
+
+// Catat kunjungan admin dashboard
+$ip = $_SERVER['REMOTE_ADDR'];
+$user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+$tanggal = date('Y-m-d');
+$cek = mysqli_query($db, "SELECT id FROM tbl_pengunjung WHERE ip_address='$ip' AND tanggal='$tanggal'");
+if(mysqli_num_rows($cek) == 0) {
+    mysqli_query($db, "INSERT INTO tbl_pengunjung (tanggal, ip_address, user_agent) VALUES ('$tanggal', '$ip', '".mysqli_real_escape_string($db, $user_agent)."')");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,24 +82,80 @@ if (!isset($_SESSION['username'])) {
                     $data = mysqli_fetch_assoc($query);
                     ?>
                     <p class="text-2xl md:text-3xl font-black text-white"><?php echo $data['total']; ?> <span class='text-base font-normal'>belum dibaca</span></p>
+                    <?php if ($_SESSION['role'] === 'Admin') { ?>
                     <a href="kontak.php" class="inline-block mt-2 bg-white text-[#F59E42] font-bold px-4 py-2 rounded border-2 border-black shadow hover:bg-[#F59E42] hover:text-white transition-all">Lihat Pesan</a>
+                    <?php } ?>
                 </div>
             </div>
 
             <div class="border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <h3 class="text-xl md:text-2xl font-black text-[#1B4965] mb-4">Artikel Terbaru</h3>
-                <div class="space-y-4">
+                <h3 class="text-xl md:text-2xl font-black text-[#1B4965] mb-4">Statistik Pengunjung</h3>
+                <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-center">
                     <?php
-                    $query = mysqli_query($db, "SELECT * FROM tbl_artikel ORDER BY id_artikel DESC LIMIT 3");
-                    while($data = mysqli_fetch_assoc($query)) {
-                        echo '<div class="bg-white border-2 border-black p-3 md:p-4 hover:bg-[#E8F1F2] transition-colors">';
-                        echo '<h4 class="text-base md:text-lg font-bold text-[#1B4965]">' . htmlspecialchars($data['nama_artikel']) . '</h4>';
-                        echo '<p class="text-sm md:text-base text-gray-700">' . substr(htmlspecialchars($data['isi_artikel']), 0, 100) . '...</p>';
-                        echo '</div>';
+                    // Statistik harian
+                    $today = date('Y-m-d');
+                    $q_today = mysqli_query($db, "SELECT COUNT(*) as total FROM tbl_pengunjung WHERE tanggal = '$today'");
+                    $today_total = mysqli_fetch_assoc($q_today)['total'];
+                    // Statistik mingguan (7 hari terakhir)
+                    $week_ago = date('Y-m-d', strtotime('-6 days'));
+                    $q_week = mysqli_query($db, "SELECT tanggal, COUNT(*) as total FROM tbl_pengunjung WHERE tanggal >= '$week_ago' AND tanggal <= '$today' GROUP BY tanggal ORDER BY tanggal ASC");
+                    $week_data = [];
+                    $week_labels = [];
+                    while($row = mysqli_fetch_assoc($q_week)) {
+                        $week_labels[] = date('D', strtotime($row['tanggal']));
+                        $week_data[] = $row['total'];
                     }
+                    // Pie chart: total unique IP minggu ini
+                    $q_unique = mysqli_query($db, "SELECT COUNT(DISTINCT ip_address) as total FROM tbl_pengunjung WHERE tanggal >= '$week_ago' AND tanggal <= '$today'");
+                    $unique_total = mysqli_fetch_assoc($q_unique)['total'];
                     ?>
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-[#1B4965]">Hari ini</div>
+                        <div class="text-4xl font-bold text-[#5FA8A3] my-2"><?php echo $today_total; ?></div>
+                        <div class="text-gray-700">Pengunjung</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-[#1B4965]">7 Hari</div>
+                        <div class="text-4xl font-bold text-[#F59E42] my-2"><?php echo array_sum($week_data); ?></div>
+                        <div class="text-gray-700">Total Kunjungan</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-[#1B4965]">Unique</div>
+                        <div class="text-4xl font-bold text-[#1B4965] my-2"><?php echo $unique_total; ?></div>
+                        <div class="text-gray-700">IP Minggu Ini</div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <canvas id="chartKunjungan" height="100"></canvas>
                 </div>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            const ctx = document.getElementById('chartKunjungan').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: <?php echo json_encode($week_labels); ?>,
+                    datasets: [{
+                        label: 'Kunjungan Harian',
+                        data: <?php echo json_encode($week_data); ?>,
+                        backgroundColor: '#5FA8A3',
+                        borderColor: '#1B4965',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        title: { display: true, text: 'Grafik Kunjungan 7 Hari Terakhir' }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+            </script>
         </main>
     </div>
 
