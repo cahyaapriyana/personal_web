@@ -20,8 +20,9 @@ Personal Web | Cahya Apriyana
 <nav class="bg-[#5FA8A3] border-b-2 border-black text-white py-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
 <ul class="flex justify-center space-x-10 font-['Segoe UI', 'San Francisco', 'Roboto', sans-serif] font-bold text-lg">
 <li><a href="index.php" class="hover:underline hover:text-[#1B4965] transition-all">Artikel</a></li>
-<li><a href="gallery.php" class="hover:underline hover:text-[#6f7274] transition-all">Gallery</a></li>
+<li><a href="gallery.php" class="hover:underline hover:text-[#1B4965] transition-all">Gallery</a></li>
 <li><a href="about.php" class="hover:underline hover:text-[#1B4965] transition-all">About</a></li>
+<li><a href="kontak.php" class="hover:underline hover:text-[#1B4965] transition-all">Kontak</a></li>
 <?php if(isset($_SESSION['username'])) {
     echo "<li><a href='admin/logout.php' class='hover:underline hover:text-[#1B4965] transition-all'>Logout</a></li>";
 } else {

@@ -59,6 +59,7 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -651,6 +652,9 @@
   .bg-\[\#F2F2F2\] {
     background-color: #F2F2F2;
   }
+  .bg-\[\#F59E42\] {
+    background-color: #F59E42;
+  }
   .bg-\[\#FF6B6B\] {
     background-color: #FF6B6B;
   }
@@ -803,6 +807,10 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
@@ -812,6 +820,9 @@
   }
   .text-\[\#5FA8A3\] {
     color: #5FA8A3;
+  }
+  .text-\[\#F59E42\] {
+    color: #F59E42;
   }
   .text-gray-400 {
     color: var(--color-gray-400);
@@ -1032,6 +1043,13 @@
       }
     }
   }
+  .hover\:bg-\[\#F59E42\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #F59E42;
+      }
+    }
+  }
   .hover\:bg-gray-50 {
     &:hover {
       @media (hover: hover) {
@@ -1092,6 +1110,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-red-900);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
       }
     }
   }

@@ -49,7 +49,7 @@ if (!isset($_SESSION['username'])) {
                 <p class="text-base md:text-lg text-gray-700">Ini adalah halaman dashboard admin. Silakan pilih menu di sidebar untuk mengelola konten website.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
                 <div class="bg-[#5FA8A3] border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                     <h3 class="text-lg md:text-xl font-bold text-white mb-2">Total Artikel</h3>
                     <?php
@@ -65,6 +65,15 @@ if (!isset($_SESSION['username'])) {
                     $data = mysqli_fetch_assoc($query);
                     ?>
                     <p class="text-2xl md:text-3xl font-black text-white"><?php echo $data['total']; ?></p>
+                </div>
+                <div class="bg-[#F59E42] border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2">Pesan Masuk</h3>
+                    <?php
+                    $query = mysqli_query($db, "SELECT COUNT(*) as total FROM tbl_kontak WHERE status = 'belum_dibaca'");
+                    $data = mysqli_fetch_assoc($query);
+                    ?>
+                    <p class="text-2xl md:text-3xl font-black text-white"><?php echo $data['total']; ?> <span class='text-base font-normal'>belum dibaca</span></p>
+                    <a href="kontak.php" class="inline-block mt-2 bg-white text-[#F59E42] font-bold px-4 py-2 rounded border-2 border-black shadow hover:bg-[#F59E42] hover:text-white transition-all">Lihat Pesan</a>
                 </div>
             </div>
 

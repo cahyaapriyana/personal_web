@@ -47,6 +47,7 @@ if(isset($article_data['nama_artikel'])) {
 <li><a href="index.php" class="hover:underline hover:text-[#1B4965] transition-all">Artikel</a></li>
 <li><a href="gallery.php" class="hover:underline hover:text-[#1B4965] transition-all">Gallery</a></li>
 <li><a href="about.php" class="hover:underline hover:text-[#1B4965] transition-all">About</a></li>
+<li><a href="kontak.php" class="hover:underline hover:text-[#1B4965] transition-all">Kontak</a></li>
 <?php if(isset($_SESSION['username'])) { ?>
     <li><a href="admin/logout.php" class="hover:underline hover:text-[#1B4965] transition-all">Logout</a></li>
 <?php } else { ?>
