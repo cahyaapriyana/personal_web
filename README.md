@@ -40,18 +40,56 @@ Website pribadi berbasis **PHP** & **MySQL** dengan fitur artikel, galeri, about
 
 ```
 .
-├── admin/              # Halaman & proses admin (artikel, galeri, user, about, kontak)
-├── images/             # Gambar untuk galeri
-├── src/                # Asset CSS & favicon
+├── admin/                  # Halaman & proses admin (artikel, galeri, user, about, kontak)
+│   ├── about.php
+│   ├── add_about.php
+│   ├── add_artikel.php
+│   ├── add_gallery.php
+│   ├── beranda_admin.php
+│   ├── cek_login.php
+│   ├── data_artikel.php
+│   ├── data_gallery.php
+│   ├── data_user.php
+│   ├── delete_about.php
+│   ├── delete_artikel.php
+│   ├── delete_gallery.php
+│   ├── edit_about.php
+│   ├── edit_artikel.php
+│   ├── edit_gallery.php
+│   ├── edit_user_role.php
+│   ├── kontak.php
+│   ├── login.php
+│   ├── logout.php
+│   ├── proses_add_about.php
+│   ├── proses_add_artikel.php
+│   ├── proses_add_gallery.php
+│   ├── proses_edit_about.php
+│   ├── proses_edit_artikel.php
+│   ├── proses_edit_gallery.php
+│   ├── proses_edit_user_role.php
+│   └── register.php
+├── images/                 # Gambar untuk galeri
+│   ├── Artificial-Intelligence.jpg
+│   ├── Batik-Kawung-1.jpeg
+│   ├── Mi_ayam_jamur.JPG
+│   └── pemain-persib-bandung.jpeg
+├── src/                    # Asset CSS & favicon
+│   ├── favico.png
+│   ├── input.css
+│   └── output.css
 ├── db_cahya_apriyana_d1a240400.sql # File SQL struktur & data awal database
-├── index.php           # Halaman utama (artikel)
-├── artikel.php         # Detail artikel & komentar
-├── gallery.php         # Galeri foto
-├── about.php           # Tentang saya
-├── kontak.php          # Formulir kontak
-├── koneksi.php         # Koneksi database
-├── package.json        # Dependensi Tailwind
-└── tailwind.config.js  # Konfigurasi Tailwind
+├── index.php               # Halaman utama (artikel)
+├── artikel.php             # Detail artikel & komentar
+├── gallery.php             # Galeri foto
+├── about.php               # Tentang saya
+├── kontak.php              # Formulir kontak
+├── koneksi.php             # Koneksi database
+├── proses_hapus_komentar.php
+├── proses_komentar.php
+├── proses_kontak.php
+├── package.json            # Dependensi Tailwind
+├── package-lock.json
+└── tailwind.config.js      # Konfigurasi Tailwind
 ```
 
 ---
