@@ -56,34 +56,6 @@ Website pribadi berbasis **PHP** & **MySQL** dengan fitur artikel, galeri, about
 
 ---
 
-## 🚀 Instalasi & Setup
-
-1. **Clone repo ini**
-2. **Import database**
-   - Buat database baru di MySQL, import `db_cahya_apriyana_d1a240400.sql`
-3. **Konfigurasi koneksi**
-   - Edit `koneksi.php` jika perlu (default: root tanpa password)
-4. **Install TailwindCSS (opsional, jika ingin rebuild CSS)**
-   ```bash
-   npm install
-   npx tailwindcss -i src/input.css -o src/output.css --watch
-   ```
-5. **Jalankan di localhost**
-   - Letakkan di folder web server (misal: `htdocs`/`www` di XAMPP/Laragon)
-   - Akses via browser: `http://localhost/personal_cahya_apriyana_d1a240400/`
-
----
-
-## 👤 Akun Default
-
-| Role   | Username | Password |
-| ------ | -------- | -------- |
-| Admin  | admin    | admin    |
-| Editor | cahya    | 123      |
-| Viewer | Ohim     | Ohim     |
-
----
-
 ## 🖥️ User Interface Halaman Publik
 
 **Beranda**  
@@ -105,8 +77,6 @@ Halaman yang berisi profil singkat atau biodata pemilik website.
 **Kontak**  
 Halaman yang menyediakan formulir untuk pengunjung mengirim pesan ke admin.
 ![Kontak](link-gambar-kontak)
-
-> Ganti `link-gambar-...` dengan path gambar yang sudah kamu upload, misal: `./images/beranda.png`
 
 ---
 
@@ -153,3 +123,31 @@ Halaman untuk mengelola data user, role (Admin, Editor, Viewer), dan hak akses.
 **Kelola Pesan Kontak**  
 Halaman untuk melihat, membaca, dan menghapus pesan yang masuk dari form kontak.  
 ![Kelola Pesan](link-gambar-kelola-pesan)
+
+## 🚀 Instalasi & Setup
+
+1. **Clone repo ini**
+2. **Import database**
+   - Buat database baru di MySQL, import `db_cahya_apriyana_d1a240400.sql`
+3. **Konfigurasi koneksi**
+   - Edit `koneksi.php` jika perlu (default: root tanpa password)
+4. **Install TailwindCSS (opsional, jika ingin rebuild CSS)**
+   ```bash
+   npm install
+   npx tailwindcss -i src/input.css -o src/output.css --watch
+   ```
+5. **Jalankan di localhost**
+   - Letakkan di folder web server (misal: `htdocs`/`www` di XAMPP/Laragon)
+   - Akses via browser: `http://localhost/personal_cahya_apriyana_d1a240400/`
+
+---
+
+## 👤 Akun Default
+
+| Role   | Username | Password |
+| ------ | -------- | -------- |
+| Admin  | admin    | admin    |
+| Editor | cahya    | 123      |
+| Viewer | Ohim     | Ohim     |
+
+---
