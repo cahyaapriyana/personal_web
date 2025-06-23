@@ -140,29 +140,47 @@ Halaman yang menyediakan formulir untuk pengunjung mengirim pesan ke admin.
 Berikut adalah tampilan utama halaman admin untuk mengelola website:
 
 **Dashboard Admin**  
-Halaman utama admin yang menampilkan ringkasan statistik pengunjung, jumlah artikel, galeri, user, dan pesan masuk.
+Halaman utama admin yang menampilkan ringkasan statistik pengunjung, jumlah artikel, galeri, user, dan pesan masuk.  
 ![Dashboard Admin](link-gambar-dashboard-admin)
 
 **Kelola Artikel**  
-Halaman untuk melihat, menambah, mengedit, dan menghapus artikel.
+Halaman untuk melihat daftar artikel, menambah, mengedit, dan menghapus artikel.  
 ![Kelola Artikel](link-gambar-kelola-artikel)
 
+- **Edit Artikel**  
+  Halaman form untuk mengedit judul, isi, kategori, dan gambar artikel.  
+  ![Edit Artikel](link-gambar-edit-artikel)
+
 **Kelola Galeri**  
-Halaman untuk mengelola koleksi gambar/foto di galeri.
+Halaman untuk mengelola koleksi gambar/foto di galeri.  
 ![Kelola Galeri](link-gambar-kelola-galeri)
 
+- **Edit Galeri**  
+  Halaman form untuk mengedit judul dan gambar galeri.  
+  ![Edit Galeri](link-gambar-edit-galeri)
+
 **Kelola About**  
-Halaman untuk mengedit profil/about pemilik website.
+Halaman untuk mengedit profil/about pemilik website.  
 ![Kelola About](link-gambar-kelola-about)
 
+- **Edit About**  
+  Halaman form untuk mengedit informasi profil/about.  
+  ![Edit About](link-gambar-edit-about)
+
 **Kelola User & Role**  
-Halaman untuk mengelola data user, role (Admin, Editor, Viewer), dan hak akses.
+Halaman untuk mengelola data user, role (Admin, Editor, Viewer), dan hak akses.  
 ![Kelola User](link-gambar-kelola-user)
 
+- **Edit User/Role**  
+  Halaman form untuk mengedit data user dan peran/role-nya.  
+  ![Edit User](link-gambar-edit-user)
+
 **Kelola Pesan Kontak**  
-Halaman untuk melihat, membaca, dan menghapus pesan yang masuk dari form kontak.
+Halaman untuk melihat, membaca, dan menghapus pesan yang masuk dari form kontak.  
 ![Kelola Pesan](link-gambar-kelola-pesan)
 
-> Ganti `link-gambar-...` dengan path gambar yang sudah kamu upload, misal: `./images/dashboard-admin.png`
+---
+
+> Ganti `link-gambar-...` dengan path gambar yang sudah kamu upload, misal: `./images/edit-artikel.png`
 
 ---
