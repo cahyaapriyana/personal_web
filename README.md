@@ -75,7 +75,6 @@ Website pribadi berbasis **PHP** & **MySQL** dengan fitur artikel, galeri, about
 │   ├── favico.png
 │   ├── input.css
 │   └── output.css
-├── db_cahya_apriyana_d1a240400.sql # File SQL struktur & data awal database
 ├── index.php               # Halaman utama (artikel)
 ├── artikel.php             # Detail artikel & komentar
 ├── gallery.php             # Galeri foto
