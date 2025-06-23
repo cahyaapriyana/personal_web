@@ -203,7 +203,7 @@ Halaman untuk melihat, membaca, dan menghapus pesan yang masuk dari form kontak.
    ```
 5. **Jalankan di localhost**
    - Letakkan di folder web server (misal: `htdocs`/`www` di XAMPP/Laragon)
-   - Akses via browser: `http://localhost/personal_cahya_apriyana_d1a240400/`
+   - Akses via browser: `http://localhost/UAS_CahyaApriyana_D1A240400/`
 
 ---
 
