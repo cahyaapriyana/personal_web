@@ -84,32 +84,7 @@ Website pribadi berbasis **PHP** & **MySQL** dengan fitur artikel, galeri, about
 
 ---
 
-## 🖼️ Contoh Gambar Galeri
-
-- `Artificial-Intelligence.jpg`
-- `Batik-Kawung-1.jpeg`
-- `Mi_ayam_jamur.JPG`
-- `pemain-persib-bandung.jpeg`
-
----
-
 ## 🖥️ User Interface Halaman Publik
-
-Berikut adalah tampilan utama halaman publik website:
-
-| Halaman            | Deskripsi Singkat                                                | Contoh Tampilan                        |
-| ------------------ | ---------------------------------------------------------------- | -------------------------------------- |
-| **Beranda**        | Daftar artikel terbaru, fitur pencarian & filter kategori.       | ![Beranda](link-gambar-beranda)        |
-| **Detail Artikel** | Menampilkan isi artikel, komentar bertingkat, dan form komentar. | ![Detail Artikel](link-gambar-artikel) |
-| **Galeri**         | Koleksi gambar dengan modal preview.                             | ![Galeri](link-gambar-galeri)          |
-| **About**          | Profil singkat pemilik website.                                  | ![About](link-gambar-about)            |
-| **Kontak**         | Formulir kirim pesan ke admin.                                   | ![Kontak](link-gambar-kontak)          |
-
-> **Catatan:** Silakan upload screenshot tampilan ke GitHub (misal di folder `/images/`), lalu ganti `link-gambar-...` dengan URL gambar yang sesuai.
-
----
-
-## 📸 Contoh Tampilan Halaman Publik
 
 **Beranda**  
 Halaman Home atau Halaman Artikel adalah halaman yang menampilkan daftar artikel dan artikel terbaru.
@@ -178,9 +153,3 @@ Halaman untuk mengelola data user, role (Admin, Editor, Viewer), dan hak akses.
 **Kelola Pesan Kontak**  
 Halaman untuk melihat, membaca, dan menghapus pesan yang masuk dari form kontak.  
 ![Kelola Pesan](link-gambar-kelola-pesan)
-
----
-
-> Ganti `link-gambar-...` dengan path gambar yang sudah kamu upload, misal: `./images/edit-artikel.png`
-
----
