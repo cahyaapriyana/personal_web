@@ -67,10 +67,6 @@ Website pribadi berbasis **PHP** & **MySQL** dengan fitur artikel, galeri, about
 │   ├── proses_edit_user_role.php
 │   └── register.php
 ├── images/                 # Gambar untuk galeri
-│   ├── Artificial-Intelligence.jpg
-│   ├── Batik-Kawung-1.jpeg
-│   ├── Mi_ayam_jamur.JPG
-│   └── pemain-persib-bandung.jpeg
 ├── src/                    # Asset CSS & favicon
 │   ├── favico.png
 │   ├── input.css
