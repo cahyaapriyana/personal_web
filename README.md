@@ -108,3 +108,29 @@ Berikut adalah tampilan utama halaman publik website:
 > **Catatan:** Silakan upload screenshot tampilan ke GitHub (misal di folder `/images/`), lalu ganti `link-gambar-...` dengan URL gambar yang sesuai.
 
 ---
+
+## 📸 Contoh Tampilan Halaman Publik
+
+**Beranda**  
+Halaman Home atau Halaman Artikel adalah halaman yang menampilkan daftar artikel dan artikel terbaru.
+![Beranda](link-gambar-beranda)
+
+**Detail Artikel**  
+Halaman yang menampilkan isi lengkap artikel, komentar bertingkat, dan form untuk menambah komentar.
+![Detail Artikel](link-gambar-artikel)
+
+**Galeri**  
+Halaman yang menampilkan koleksi gambar/foto dengan fitur modal preview saat gambar diklik.
+![Galeri](link-gambar-galeri)
+
+**About**  
+Halaman yang berisi profil singkat atau biodata pemilik website.
+![About](link-gambar-about)
+
+**Kontak**  
+Halaman yang menyediakan formulir untuk pengunjung mengirim pesan ke admin.
+![Kontak](link-gambar-kontak)
+
+> Ganti `link-gambar-...` dengan path gambar yang sudah kamu upload, misal: `./images/beranda.png`
+
+---
