@@ -130,7 +130,7 @@ Halaman yang menyediakan formulir untuk pengunjung mengirim pesan ke admin.
 Berikut adalah tampilan utama halaman admin untuk mengelola website:
 
 **Halaman Login**  
-Halaman Login adalah halaman yang digunakan untuk mengakses halaman admin. Pengguna diminta untuk memasukkan username dan password. Jika belum memiliki akun, pengguna dapat melakukan registrasi (register) terlebih dahulu untuk mendapatkan akses.
+Halaman yang digunakan untuk mengakses halaman admin. Pengguna diminta untuk memasukkan username dan password. Jika belum memiliki akun, pengguna dapat melakukan registrasi (register) terlebih dahulu untuk mendapatkan akses.
 
 ![image](https://github.com/user-attachments/assets/cec4a107-b668-4564-83fe-1818def34dfe)
 
