@@ -134,3 +134,35 @@ Halaman yang menyediakan formulir untuk pengunjung mengirim pesan ke admin.
 > Ganti `link-gambar-...` dengan path gambar yang sudah kamu upload, misal: `./images/beranda.png`
 
 ---
+
+## 🖥️ User Interface Halaman Admin
+
+Berikut adalah tampilan utama halaman admin untuk mengelola website:
+
+**Dashboard Admin**  
+Halaman utama admin yang menampilkan ringkasan statistik pengunjung, jumlah artikel, galeri, user, dan pesan masuk.
+![Dashboard Admin](link-gambar-dashboard-admin)
+
+**Kelola Artikel**  
+Halaman untuk melihat, menambah, mengedit, dan menghapus artikel.
+![Kelola Artikel](link-gambar-kelola-artikel)
+
+**Kelola Galeri**  
+Halaman untuk mengelola koleksi gambar/foto di galeri.
+![Kelola Galeri](link-gambar-kelola-galeri)
+
+**Kelola About**  
+Halaman untuk mengedit profil/about pemilik website.
+![Kelola About](link-gambar-kelola-about)
+
+**Kelola User & Role**  
+Halaman untuk mengelola data user, role (Admin, Editor, Viewer), dan hak akses.
+![Kelola User](link-gambar-kelola-user)
+
+**Kelola Pesan Kontak**  
+Halaman untuk melihat, membaca, dan menghapus pesan yang masuk dari form kontak.
+![Kelola Pesan](link-gambar-kelola-pesan)
+
+> Ganti `link-gambar-...` dengan path gambar yang sudah kamu upload, misal: `./images/dashboard-admin.png`
+
+---
