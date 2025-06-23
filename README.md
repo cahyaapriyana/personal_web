@@ -1,3 +1,5 @@
+[![Demo](https://img.shields.io/badge/DEMO%20ONLINE-artikel.codemind.id-green?style=for-the-badge)](https://artikel.codemind.id/)
+
 # Personal Web
 
 Website pribadi berbasis **PHP** & **MySQL** dengan fitur artikel, galeri, about, kontak, dan dashboard admin. Dibangun menggunakan **TailwindCSS** untuk tampilan modern dan responsif.
