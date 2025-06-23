@@ -1,6 +1,4 @@
-<a href="https://artikel.codemind.id/" target="_blank">
-  <img src="https://img.shields.io/badge/DEMO%20ONLINE-artikel.codemind.id-green?style=for-the-badge" alt="Demo Online"/>
-</a>
+[![Demo](https://img.shields.io/badge/DEMO%20ONLINE-artikel.codemind.id-green?style=for-the-badge)](https://artikel.codemind.id/)
 
 # Personal Web
 
